@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+  {% for park in park_details: %}
+    <img src="{{ park.photo_url_list[0] }}">
+    <table>
+      <tr>
+        <td>
+          <h2>{{ park.name }}</h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="{{ park.maps_url }}">{{ park.formatted_address }}</a>
+        </td>
+        <td>
+          <p class="miles-away">({{ park.travel_details.distance }}les away)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>{{ park.ratings.stars_line }}</h2>
+        </td>
+      </tr>
+    </table>
+    <hr>
+  {% endfor %}
+
+</body>
+</html>

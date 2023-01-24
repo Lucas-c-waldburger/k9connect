@@ -1,0 +1,13 @@
+img {
+    display: inline;
+}
+
+table {
+    display: inline;
+    position: relative;
+    bottom: 10em;
+}
+
+.miles-away {
+    text-decoration: italicize
+}
